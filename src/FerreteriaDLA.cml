@@ -1,0 +1,30 @@
+// Definición de Contexto Principal para la Ferretería DLA
+ContextMap DlaFerreteriaMap {
+    contains GestionInventariosContext
+    contains GestionVentasContext
+    contains GestionCajaContext
+    contains GestionProveedoresContext
+
+    /* Cooperación */
+    GestionInventariosContext [P]<->[P] GestionVentasContext
+    GestionProveedoresContext [P]<->[P] GestionInventariosContext
+
+    /* Cliente-Proveedor */
+    GestionCajaContext [C]<-[S] GestionVentasContext
+    
+
+    /* Conformista */
+    GestionInventariosContext [CF]<-[PL] GestionCajaContext
+}
+
+BoundedContext GestionInventariosContext {
+}
+
+BoundedContext GestionVentasContext {
+}
+
+BoundedContext GestionCajaContext {
+}
+
+BoundedContext GestionProveedoresContext {
+}

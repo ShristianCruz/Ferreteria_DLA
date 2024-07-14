@@ -1,0 +1,19 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"GestionCajaContext" ["margin"="0.3","orientation"="173","shape"="egg","fontsize"="16","style"="bold","label"="GestionCajaContext\n","fontname"="sans-serif"]
+"GestionInventariosContext" ["margin"="0.3","orientation"="258","shape"="egg","fontsize"="16","style"="bold","label"="GestionInventariosContext\n","fontname"="sans-serif"]
+"GestionVentasContext" ["margin"="0.3","orientation"="39","shape"="egg","fontsize"="16","style"="bold","label"="GestionVentasContext\n","fontname"="sans-serif"]
+"GestionProveedoresContext" ["margin"="0.3","orientation"="190","shape"="egg","fontsize"="16","style"="bold","label"="GestionProveedoresContext\n","fontname"="sans-serif"]
+"GestionCajaContext" -> "GestionInventariosContext" ["headlabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">D</td><td sides="trbl" bgcolor="white"><font>CF</font></td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="1" border="0">
+<tr><td bgcolor="white" sides="r">U</td><td sides="trbl" bgcolor="white"><font>PL</font></td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionInventariosContext" -> "GestionVentasContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+"GestionVentasContext" -> "GestionCajaContext" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="Customer/Supplier","dir"="none","fontname"="sans-serif"]
+"GestionProveedoresContext" -> "GestionInventariosContext" ["fontsize"="12","style"="bold","label"="Partnership","dir"="none","fontname"="sans-serif"]
+}
